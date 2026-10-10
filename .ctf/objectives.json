@@ -1,0 +1,57 @@
+{
+  "objectives": [
+    {
+      "key": "main",
+      "title": "Read the flag",
+      "prompt": "Use the program's write primitive so that it prints the flag back to you.",
+      "check": {
+        "evidence": "SECRET",
+        "format": "CTF{%s}"
+      },
+      "dev": "CTF{dev-google-ctf-2023-write-flag-where}",
+      "hints": [
+        "The program tells you where everything is mapped.",
+        "It prints a message later on: where is that message stored?"
+      ],
+      "steps": [
+        {
+          "key": "maps",
+          "title": "Find the map",
+          "prompt": "Which procfs file does the program show you?",
+          "check": {
+            "answer": [
+              "/proc/self/maps",
+              "maps",
+              "proc/self/maps"
+            ]
+          }
+        },
+        {
+          "key": "defeated",
+          "title": "Name what that defeats",
+          "prompt": "Which mitigation does knowing the mappings defeat? (acronym)",
+          "check": {
+            "answer": [
+              "aslr",
+              "address space layout randomization",
+              "pie"
+            ]
+          }
+        },
+        {
+          "key": "primitive",
+          "title": "Name the primitive",
+          "prompt": "What is the general name of a primitive that writes data at an address you choose?",
+          "check": {
+            "answer": [
+              "write-what-where",
+              "write what where",
+              "arbitrary write",
+              "write-where"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
