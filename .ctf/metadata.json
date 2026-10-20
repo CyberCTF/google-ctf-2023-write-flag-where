@@ -1,8 +1,11 @@
 {
+  "project_name": "cyberlabs-google-ctf-2023-write-flag-where",
+  "slug": "google-ctf-2023-write-flag-where",
   "title": "Google CTF 2023: write-flag-where",
   "description": "The program prints its memory mappings and then, for any address and length you give, writes the flag there. The task is to make it print what it wrote.",
-  "question": "Use the flag-writing primitive so that the program prints the flag.",
-  "category": "PWN",
+  "category": "pwn",
   "difficulty": 2,
-  "evidence_kind": "SECRET"
+  "evidence_kind": "SECRET",
+  "capabilities": [],
+  "question": "Use the flag-writing primitive so that the program prints the flag."
 }
